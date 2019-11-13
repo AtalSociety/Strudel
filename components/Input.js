@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 5,
     color: "white",
-    fontSize: 20
+    fontSize: 18
   },
   font: {
     fontSize: 20,
