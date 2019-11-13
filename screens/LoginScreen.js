@@ -1,41 +1,56 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  Keyboard,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback
+} from "react-native";
 
 import Input from "../components/Input";
 import Colors from "../constants/colors";
 import ForgottenButton from "../components/ForgettenButton";
-import LoginButton from "../components/LoginButton";
+import LoginButton from "../components/MainButton";
 
 const LoginScreen = props => {
   const onTextPress = () => {
     console.log("Text has been pressed!");
   };
   return (
-    <View style={styles.screen}>
-      <Image
-        style={styles.image}
-        source={require("../assets/logo_small.png")}
-        resizeMethod="resize"
-        resizeMode="center"
-      />
-      <View style={styles.inputContainer}>
-        <Input title="Username" />
-        <Input title="Password" />
-      </View>
-      <LoginButton title="Login" />
-      <View>
-        <ForgottenButton
-          title="forgotten username/password?"
-          onPress={() => this.onTextPress()}
+    <TouchableWithoutFeedback
+      onPress={() => {
+        Keyboard.dismiss();
+      }}
+    >
+      <KeyboardAvoidingView style={styles.screen} behavior="padding">
+        <Image
+          style={styles.image}
+          source={require("../assets/logo_small.png")}
+          resizeMethod="resize"
+          resizeMode="center"
         />
-        <ForgottenButton
-          title="new user?"
-          onPress={() => {
-            console.Log("new user");
-          }}
-        />
-      </View>
-    </View>
+        <View style={styles.inputContainer}>
+          <Input title="Username" />
+          <Input title="Password" password={true} />
+        </View>
+        <LoginButton title="Login" />
+        <View>
+          <ForgottenButton
+            title="Forgotten password?"
+            onPress={() => this.onTextPress()}
+            style={{ marginTop: 30 }}
+          />
+          <ForgottenButton
+            title="Create account"
+            onPress={() => {
+              console.Log("new user");
+            }}
+          />
+        </View>
+      </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
   );
 };
 

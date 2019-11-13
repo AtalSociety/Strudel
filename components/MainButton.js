@@ -16,7 +16,7 @@ const LoginButton = props => {
 const styles = StyleSheet.create({
   button: {
     backgroundColor: Colors.accent,
-    marginVertical: 15,
+    marginVertical: 25,
     paddingVertical: 2,
     paddingHorizontal: 50,
     borderRadius: 25
