@@ -4,8 +4,9 @@ import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
 import Colors from "../constants/colors";
 
 const LoginButton = props => {
+  console.log("Pressing login");
   return (
-    <TouchableOpacity onPress={props.onPress}>
+    <TouchableOpacity onPress={props.onSelect}>
       <View style={styles.button}>
         <Text style={styles.text}>{props.title}</Text>
       </View>
