@@ -36,14 +36,13 @@ const LoginScreen = props => {
           <Input title="Username" />
           <Input title="Password" password={true} />
         </View>
-        <TouchableOpacity
-          onPress={() => {
-            console.log("Main Again");
+        <LoginButton
+          title="LOGIN"
+          style={{ marginTop: 30 }}
+          onSelect={() => {
             props.navigation.navigate({ routeName: "Main" });
           }}
-        >
-          <ForgottenButton title="LOGIN" style={{ marginTop: 30 }} />
-        </TouchableOpacity>
+        />
         <View>
           <TouchableOpacity
             onPress={() => {
