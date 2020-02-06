@@ -2,11 +2,10 @@ import React from "react";
 import { TextInput, StyleSheet, Text, View } from "react-native";
 
 const Input = props => {
-  let password = props.password;
   return (
     <View style={styles.inputContainer}>
       <Text style={styles.font}>{props.title}</Text>
-      <TextInput style={styles.input} secureTextEntry={password} />
+      <TextInput style={styles.input} />
     </View>
   );
 };
@@ -20,14 +19,14 @@ const styles = StyleSheet.create({
     height: 30,
     width: "100%",
     borderBottomColor: "white",
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     marginTop: 10,
     marginBottom: 5,
     color: "white",
-    fontSize: 25
+    fontSize: 20
   },
   font: {
-    fontSize: 18,
+    fontSize: 20,
     color: "white"
   }
 });

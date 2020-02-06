@@ -1,10 +1,15 @@
 import React from "react";
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
-import StrudelNavigator from "./navigation/StrudelNavigator";
+import Header from "./components/Header";
+import LoginScreen from "./screens/LoginScreen";
 
 export default function App() {
-  return <StrudelNavigator />;
+  return (
+    <View style={styles.screen}>
+      <LoginScreen />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
