@@ -2,15 +2,13 @@ import React from "react";
 import { Text, StyleSheet } from "react-native";
 
 const ForgottenButton = props => {
-  return <Text style = {styles.button}>{props.title}</Text>;
+  return <Text>{props.title}</Text>;
 };
 
 const styles = StyleSheet.create({
   button: {
-    color: 'white',
-    padding: '2.5%',
-    fontSize: 17,
-    textAlign: 'center'
+    color: "rgba(1,0,0,1)",
+    backgroundColor: "rgba(0,0,0,1)"
   }
 });
 
